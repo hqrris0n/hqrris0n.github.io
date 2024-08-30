@@ -3,9 +3,158 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>FINAL VERSION</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <script defer src="script.js"></script>
 </head>
 <body>
-    
+    <div class="pattern_container">
+        <img src="assets/pattern.svg" alt="circular pattern" id="pattern">
+    </div>
+    <div class="header__blur"></div>
+    <nav class="header row">
+        <a class="header__logo" onclick="easterEgg()" href="#hero">
+            <div>NGU</div>
+            <div>YEN</div>
+        </a>
+        <div class="visible__links">
+            <ul class="header__links row">
+                <li><a href="#about" class="header__option">ABOUT</a></li>
+                <li><a href="#projects" class="header__option">PROJECTS</a></li>
+                <li><a href="#contact" class="header__option">CONTACT</a></li>
+            </ul>
+            <div class="hamburger">
+                <div class="hamburger__icon" onclick="toggleMenu()" >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <ul class="hamburger__links col">
+                    <li><a href="#about" class="header__option" onclick="toggleMenu()">ABOUT</a></li>
+                    <li><a href="#projects" class="header__option" onclick="toggleMenu()">PROJECTS</a></li>
+                    <li><a href="#contact" class="header__option" onclick="toggleMenu()">CONTACT</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section id="hero">
+        <div class="hero__scroll col">
+            <span class="scroll__box"></span>
+            <p class="scroll__word">SCROLL</p>
+            <div><span class="scroll__line"></span></div>
+        </div>
+        <div class="hero__name">
+            <p class="first_name">HARRISON</p>
+            <p class="last_name">NGUYEN</p>
+            <div class="hero__details">
+                <p class="position">Rising Sophomore</p>
+                <p class="position">Computer Science</p>
+            </div>
+        </div>
+        <div class="socials col">
+            <a href="https://www.linkedin.com/in/harrison-n-102496212">
+                <img src="assets/linkedin.svg" alt="LinkedIn">
+            </a>
+            <a href="https://github.com/hqrris0n">
+                <img src="assets/github.svg" alt="Github">
+            </a>
+            <a href="assets/resume.pdf">
+                <img src="assets/file.svg" alt="Github">
+            </a>
+        </div>
+    </section>
+
+    <section id="about">
+        <h class="title">•ABOUT•</h>
+        <div class="about__content">
+            <h1>Hello there!</h1>
+            <p>
+                My name is Harrison Nguyen. I am a rising sophomore at the University of Texas at 
+                Austin studying computer science. I enjoy spending my time in a variety of hobbies, 
+                including watching anime, playing video games, tinkering, and spending time with my 
+                family. I am always eager to learn more and follow incredible examples, so let's get
+                in contact!
+            </p>
+            <img src="assets/mudkip.gif" alt="mudkip" class="mudkip">
+        </div>
+        <img class="about__headshot" src="assets/headshot.jpg">
+    </section>
+
+    <section id="projects">
+        <h class="title">•PROJECTS•</h>
+        <div class="projects__display">
+            <div class="projects__desktop">
+                <img class="projects__app-open" src="assets/Device_replay_window.png">
+                <img src="assets/repeated_mouse.gif" alt="" class="projects__extra">
+                <p class="projects_description">Change the inner html and style this with absolute</p>
+                <img class="projects__background" src="assets/desktop.jpg">
+            </div>
+            <div class="app_details row">
+                <p class="projects__app-name">Huffman Compression</p>
+                <p class="projects__app-detail">Java</p>
+                <p class="projects__app-year">2024</p>
+            </div>
+        </div>
+        <div class="projects__icons">
+            <img class="projects__app-icon" src="assets/java.svg" alt="Java Icon" onclick="changeName(0)">
+            <p onclick="changeName(0)">Huffman Compression</p>
+            <img class="projects__app-icon" src="assets/python.svg" alt="Python Icon" onclick="changeName(2)">
+            <p onclick="changeName(2)">Device Replay</p>
+            <img class="projects__app-icon" src="assets/java.svg" alt="Java Icon" onclick="changeName(1)">
+            <p onclick="changeName(1)">Critters</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h class="title">•Contact•</h>
+        <div class="contact__query col">
+            <h1>
+                Looking to fill your team?
+            </h1>
+            <h1>
+                Let's work.
+            </h1>
+            <p>
+                I am looking for CS internships in app & web development.
+            </p>
+            <form id="contact_form">
+                <div class="form__row row">
+                    <div class="form__name">
+                        <input type="text" id="name__input" required>
+                        <label for="name" id="name__label">Name</label>
+                    </div>
+                    <div class="form__email">
+                        <input type="text" id="email__input" required>
+                        <label for="name" id="email__label">Email</label>
+                    </div>
+                </div>
+                <div class="form__message">
+                    <textarea name="message" id="message__input" required></textarea>
+                    <label for="message">Message</label>
+                </div>
+                <input type="submit" value="Send Message">
+            </form>
+        </div>
+        <div class="contact__socials col">
+            <h>Contact Details</h>
+            <a id=contact__email href="mailto:harrisonguyen.05@gmail.com?subject=Mail from Site">
+                harrisonguyen.05@gmail.com
+            </a>
+            <h>Other Links</h>
+            <div class="socials col">
+                <a href="https://www.linkedin.com/in/harrison-n-102496212">
+                    <img src="assets/linkedin.svg" alt="LinkedIn">
+                </a>
+                <a href="https://github.com/hqrris0n">
+                    <img src="assets/github.svg" alt="Github">
+                </a>
+                <a href="assets/resume.pdf">
+                    <img src="assets/file.svg" alt="Github">
+                </a>
+            </div>
+        </div>
+    </section>
+    <footer class="bottom">© 2024 Harrison Nguyen</footer>
 </body>
 </html>
