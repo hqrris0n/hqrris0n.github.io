@@ -317,9 +317,10 @@ section {
 }
 
 .projects__app-extra {
-    height: 30%;
+    max-height: 30%;
+    max-width: 30%;
     position: absolute;
-    padding-left: 35%;
+    margin-left: 50%;
     margin-top: 10%;
     mix-blend-mode: screen;
 }
