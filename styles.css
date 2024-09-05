@@ -169,11 +169,11 @@ section {
     top: -20px;
     right: 0;
     width: calc(100vw + 20px);
-    height: calc(10vh + px);
+    height: calc(10vh + 20px);
     background-color: var(--primary1);
     filter: blur(10px);
-    opacity: .99;
-    z-index: 2;
+    opacity: .80;
+    z-index: 1;
 }
 
 #hero {
