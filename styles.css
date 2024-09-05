@@ -322,6 +322,7 @@ section {
     position: absolute;
     padding-left: 35%;
     margin-top: 10%;
+    mix-blend-mode: screen;
 }
 
 .projects__app-open {
