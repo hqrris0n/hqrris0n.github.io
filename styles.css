@@ -173,7 +173,7 @@ section {
     background-color: var(--primary1);
     filter: blur(10px);
     opacity: .99;
-    z-index: 1;
+    z-index: 2;
 }
 
 #hero {
@@ -278,11 +278,11 @@ section {
 }
 
 .about__content h1 {
-    font: 800 2rem "Noto Serif";
+    font: 800 1.5rem "Noto Serif";
 }
 
 .about__content p {
-    font: 400 1.75rem "Inter";
+    font: 400 1.5rem "Inter";
 }
 
 .mudkip {
@@ -317,11 +317,11 @@ section {
     background-color: green;
 }
 
-.projects__extra {
+.projects__app-extra {
     height: 30%;
     position: absolute;
-    mix-blend-mode:screen;
     padding-left: 35%;
+    margin-top: 10%;
 }
 
 .projects__app-open {
@@ -378,7 +378,7 @@ section {
 
 .projects__icons p {
     text-align: center;
-    font: 400 1.5rem "inter";
+    font: 400 1rem "inter";
 }
 
 .projects__icons p:hover {

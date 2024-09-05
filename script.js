@@ -20,7 +20,6 @@ form.addEventListener('submit', (event) => {
         };
 
     let jsonText = JSON.stringify(formData);
-    console.log(jsonText);
 
     fetch('https://script.google.com/macros/s/AKfycbzxeg3ITwHSj6nKOXpDRsmljoxH3KQ2-DQH87e0SBJuX55heEE6dXj3Ct-fVLP31bNEcw/exec', {
         method: 'POST',
@@ -63,11 +62,20 @@ function easterEgg() {
 }
 
 function changeName(appNum) {
-    console.log("Hello");
-    const appNames = ["Huffman Compression", "Critters", "Keyboard and Mouse Replay"];
-    const appYears = ["2024", "2023", "2024"];
-    const appDetails = ["Java", "Java", "Python • TKinter"];
+    const appNames = ["Huffman Compression", "Gesture Control", "Keyboard and Mouse Replay"];
+    const appYears = ["2024", "2024", "2023"];
+    const appDetails = ["Java", "Python • YOLOv8", "Python • TKinter"];
+    const appFiles = ["huffman_compression.gif", "gesture_control.gif", "Device_replay_window.png"]
+    const appExtras = ["compressing_file.gif", "type_example.gif", "repeated_mouse.gif"]
     document.querySelector(".projects__app-name").innerHTML = appNames[appNum];
     document.querySelector(".projects__app-year").innerHTML = appYears[appNum];
     document.querySelector(".projects__app-detail").innerHTML = appDetails[appNum];
+    document.querySelector(".projects__app-open").src = "assets/" + appFiles[appNum];
+    const extra = document.querySelector(".projects__app-extra");
+    extra.src = "assets/" + appExtras[appNum];
+    if (appNum != 1){
+        extra.style.mixBlendMode = 'screen'
+    } else {
+        extra.style.mixBlendMode = 'normal'
+    }
 }
